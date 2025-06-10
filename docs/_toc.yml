@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: main
+- file: cart_ok
+- file: random_forest_ok
+- file: knn_ok
+- file: svc_ok
+- file: xgboost_ok
+- file: lgbm_ok
+- file: mlp_ok
+- file: bench
+- file: variables
