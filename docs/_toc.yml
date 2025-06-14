@@ -12,5 +12,6 @@ chapters:
 - file: xgboost_ok
 - file: lgbm_ok
 - file: mlp_ok
+- file: xgboost_balanced
 - file: bench
 - file: variables
