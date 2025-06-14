@@ -78,7 +78,7 @@ df_final = pd.concat([
 if OUTPUT_PATH is None:
     script_dir = os.path.dirname(os.path.abspath(__file__))
     fecha_hoy = datetime.now().strftime("%Y_%m_%d")
-    OUTPUT_PATH = os.path.join(script_dir, f"Salida_Segm_FBV_{fecha_hoy}.xlsx")
+    OUTPUT_PATH = os.path.join(script_dir, f"Salida_Segm_{fecha_hoy}.xlsx")
 
 print("Guardando resultado final...")
 columns_to_keep = ['Cuenta', 'Num_documento', 'saldo_total', 'Rango', 'HabitoPago11', 'proba_clase_0', 'proba_clase_1', 'proba_clase_2', 'segmento_fuzzy' ]
