@@ -10,8 +10,8 @@ chapters:
 - file: knn_ok
 - file: svc_ok
 - file: xgboost_ok
+- file: xgboost_balanced
 - file: lgbm_ok
 - file: mlp_ok
-- file: xgboost_balanced
 - file: bench
 - file: variables
