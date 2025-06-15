@@ -359,7 +359,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="mlp">
 <h1><em><strong>MLP</strong></em><a class="headerlink" href="#mlp" title="Link to this heading">#</a></h1>
-<div class="cell tag_&quot;hide-cell&quot; docutils container">
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
 <span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;plotly_mimetype+notebook_connected&quot;</span>
@@ -434,8 +439,14 @@ To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, re
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># LOAD DATA</span>
 <span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;../Preprocessed_data.xlsx&quot;</span>
@@ -448,8 +459,14 @@ To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, re
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># FILE PATHS</span>
 <span class="n">model_filename</span> <span class="o">=</span> <span class="s2">&quot;../Models/best_mlp_model.pkl&quot;</span>
@@ -459,8 +476,14 @@ To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, re
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># WRAPPER CLASS FOR MLP </span>
 <span class="k">class</span> <span class="nc">MLPWrapper</span><span class="p">:</span>
@@ -558,8 +581,14 @@ To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, re
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># OPTUNA INNER CV FOR MLP</span>
 <span class="k">def</span> <span class="nf">run_inner_optuna</span><span class="p">(</span><span class="n">X_inner</span><span class="p">,</span> <span class="n">y_inner</span><span class="p">,</span> <span class="n">numeric_features</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
@@ -600,8 +629,14 @@ To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, re
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NESTED CV</span>
 <span class="k">def</span> <span class="nf">nested_cv</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">numeric_features</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
@@ -721,20 +756,33 @@ To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, re
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="p">,</span> <span class="n">metrics</span><span class="p">,</span> <span class="n">study</span><span class="p">,</span> <span class="n">visualizations</span> <span class="o">=</span> <span class="n">nested_cv</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">numeric_features</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;classification_report_val&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
@@ -749,22 +797,34 @@ weighted avg       0.86      0.86      0.86      5085
 </div>
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">me</span><span class="o">.</span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;confusion_matrix_val&#39;</span><span class="p">],</span> <span class="s2">&quot;Validation Confusion Matrix&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/52b36c50690d68c600a8871da192db056d042e5cbb95f818e4ca98e787286869.png" src="_images/52b36c50690d68c600a8871da192db056d042e5cbb95f818e4ca98e787286869.png" />
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;classification_report_test&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
@@ -779,17 +839,28 @@ weighted avg       0.86      0.87      0.86      6355
 </div>
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">me</span><span class="o">.</span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;confusion_matrix_test&#39;</span><span class="p">],</span>  <span class="s2">&quot;Test Confusion Matrix&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/1d83cdff069056c99ab78b6af0cc76f67873eb99f5924f9e51369b8231698306.png" src="_images/1d83cdff069056c99ab78b6af0cc76f67873eb99f5924f9e51369b8231698306.png" />
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_loss_curves_mlp</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -814,18 +885,30 @@ weighted avg       0.86      0.87      0.86      6355
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_loss_curves_mlp</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/4f238d1e6696ba676636c40c212f434233f836c604c62ab61596f43358ee2587.png" src="_images/4f238d1e6696ba676636c40c212f434233f836c604c62ab61596f43358ee2587.png" />
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lime.lime_tabular</span> <span class="kn">import</span> <span class="n">LimeTabularExplainer</span>
 <span class="k">def</span> <span class="nf">get_lime_explainer</span><span class="p">(</span><span class="n">wrapper</span><span class="p">,</span> <span class="n">X_train_raw</span><span class="p">,</span> <span class="n">y_train_raw</span><span class="p">):</span>
@@ -850,8 +933,14 @@ weighted avg       0.86      0.87      0.86      6355
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Construir explainer</span>
 <span class="n">explainer</span><span class="p">,</span> <span class="n">X_transformed</span> <span class="o">=</span> <span class="n">get_lime_explainer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;X_train_fold&#39;</span><span class="p">],</span> <span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;y_train_fold&#39;</span><span class="p">])</span>
@@ -873,6 +962,7 @@ weighted avg       0.86      0.87      0.86      6355
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">157/157</span> <span class=" -Color -Color-Green">━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Bold">0s</span> 685us/step
 Intercept 1.4488369112440858
@@ -38018,48 +38108,78 @@ Right: 0.27398914
 <img alt="_images/8bebaac38d592f0fd0c6d8c0b8618bf0c550da3f7c062a0b466769ba94e4188b.png" src="_images/8bebaac38d592f0fd0c6d8c0b8618bf0c550da3f7c062a0b466769ba94e4188b.png" />
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualizations</span><span class="p">[</span><span class="s1">&#39;optimization_history&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualizations</span><span class="p">[</span><span class="s1">&#39;parallel_coordinate&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualizations</span><span class="p">[</span><span class="s1">&#39;f1_score_evolution&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualizations</span><span class="p">[</span><span class="s1">&#39;param_importances&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reporte</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">metrics</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;MLP&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Report for model &#39;MLP&#39; saved:
    → CSV: ./Metrics/Metrics_MLP.csv
@@ -38068,24 +38188,36 @@ Right: 0.27398914
 </div>
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">reporte</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded 8 report(s)
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Model == &#39;MLP&#39; and Type == &#39;val&#39; and Class != &#39;global&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -38163,12 +38295,18 @@ Right: 0.27398914
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Model == &#39;MLP&#39; and Type == &#39;test&#39; and Class != &#39;global&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -38246,12 +38384,18 @@ Right: 0.27398914
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Model == &#39;MLP&#39; and Type == &#39;val&#39; and Class	== &#39;global&#39;&quot;</span><span class="p">)[[</span><span class="s2">&quot;Model&quot;</span><span class="p">,</span> <span class="s2">&quot;Type&quot;</span><span class="p">,</span> <span class="s2">&quot;accuracy&quot;</span><span class="p">,</span> <span class="s2">&quot;log_loss&quot;</span><span class="p">,</span> <span class="s2">&quot;auc&quot;</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -38291,7 +38435,12 @@ Right: 0.27398914
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">me</span><span class="o">.</span><span class="n">plot_roc_multiclass</span><span class="p">(</span>
     <span class="n">y_true</span><span class="o">=</span><span class="n">metrics</span><span class="p">[</span><span class="s2">&quot;y_test_fold&quot;</span><span class="p">],</span>
@@ -38300,16 +38449,23 @@ Right: 0.27398914
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/faf1f025047ec743dc0d2b3ac5e022daa41c1bc2e7491f75fa48193dd22a125f.png" src="_images/faf1f025047ec743dc0d2b3ac5e022daa41c1bc2e7491f75fa48193dd22a125f.png" />
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">params</span>  
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;units&#39;: 224,
  &#39;dropout&#39;: 0.12003798663185475,

@@ -418,7 +418,12 @@ document.write(`
 </section>
 <section id="levels-and-linguistic-descriptors">
 <h2><em><strong>Levels and Linguistic Descriptors</strong></em><a class="headerlink" href="#levels-and-linguistic-descriptors" title="Link to this heading">#</a></h2>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -631,6 +636,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
 <table border="1" cellspacing="0" cellpadding="5">
@@ -826,7 +832,12 @@ document.write(`
 <h2><em><strong>Membership Functions</strong></em><a class="headerlink" href="#membership-functions" title="Link to this heading">#</a></h2>
 <section id="risk-default">
 <h3><em><strong>Risk Default</strong></em><a class="headerlink" href="#risk-default" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">risk</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">),</span> <span class="s1">&#39;risk&#39;</span><span class="p">)</span>
 
@@ -840,6 +851,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ssilvera/Escritorio/Proyectos/ProyectoDeGrado/.env/lib/python3.12/site-packages/skfuzzy/control/fuzzyvariable.py:125: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
   fig.show()
@@ -882,7 +894,12 @@ document.write(`
 </section>
 <section id="days-in-arrears">
 <h3><em><strong>Days in arrears</strong></em><a class="headerlink" href="#days-in-arrears" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_days</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;a_days&#39;</span><span class="p">)</span>
 
@@ -898,6 +915,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/14b4f11d06ebbb8eed71886f1cbe6950c27ab57c7db4db341ea7b56c3735f7af.png" src="_images/14b4f11d06ebbb8eed71886f1cbe6950c27ab57c7db4db341ea7b56c3735f7af.png" />
 </div>
@@ -958,7 +976,12 @@ document.write(`
 </section>
 <section id="total-balance">
 <h3><em><strong>Total Balance</strong></em><a class="headerlink" href="#total-balance" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#total_balance_CDC = ctrl.Antecedent(np.linspace(0, 350_000_000, 5000), &quot;total_balance_CDC&quot;)</span>
 <span class="n">total_balance_CDC</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">35_000_000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">),</span> <span class="s2">&quot;total_balance_CDC&quot;</span><span class="p">)</span>
@@ -976,6 +999,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/d2b201ce8853a97540854e1972c8f030d5eaa96631a43ac6034fd712b8710417.png" src="_images/d2b201ce8853a97540854e1972c8f030d5eaa96631a43ac6034fd712b8710417.png" />
 </div>
@@ -1043,7 +1067,12 @@ document.write(`
   0, &amp; x &gt; 350,000,000
 \end{cases}
 \end{split}\]</div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#total_balance_TDC = ctrl.Antecedent(np.linspace(0, 200_000_000, 5000), &quot;total_balance_TDC&quot;)</span>
 <span class="n">total_balance_TDC</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15_000_000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">),</span> <span class="s2">&quot;total_balance_TDC&quot;</span><span class="p">)</span>
@@ -1062,6 +1091,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/b6f5b8e4b51d44ee0658006ee645c35de7475f2b118dbbb44692a327a1c98418.png" src="_images/b6f5b8e4b51d44ee0658006ee645c35de7475f2b118dbbb44692a327a1c98418.png" />
 </div>
@@ -1132,7 +1162,12 @@ document.write(`
 </section>
 <section id="overdue-balance">
 <h3><em><strong>Overdue Balance</strong></em><a class="headerlink" href="#overdue-balance" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">overdue_balance</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">35_000_000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">),</span> <span class="s2">&quot;overdue_balance&quot;</span><span class="p">)</span>
 
@@ -1148,6 +1183,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/8edf9f19f7f1541797b205dd366cc5e54b574ae6196054ffecd77d3c55fd117c.png" src="_images/8edf9f19f7f1541797b205dd366cc5e54b574ae6196054ffecd77d3c55fd117c.png" />
 </div>
@@ -1207,7 +1243,12 @@ document.write(`
 </section>
 <section id="overdue-installment">
 <h3><em><strong>Overdue Installment</strong></em><a class="headerlink" href="#overdue-installment" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">overdue_installment</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6_000_000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">),</span> <span class="s2">&quot;overdue_installment&quot;</span><span class="p">)</span>
 
@@ -1223,6 +1264,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/b73ce5a8723f02756374f8c0e708bc2290a0575edd8587ac24def191b1ae0c78.png" src="_images/b73ce5a8723f02756374f8c0e708bc2290a0575edd8587ac24def191b1ae0c78.png" />
 </div>
@@ -1282,7 +1324,12 @@ document.write(`
 </section>
 <section id="priorizacion">
 <h3><em><strong>Priorización</strong></em><a class="headerlink" href="#priorizacion" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prioritization</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;prioritization&quot;</span><span class="p">)</span>
 
@@ -1296,6 +1343,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/6648a1e8de65f624af65f0c8da9deb021d7682c8ecc5cebc1ce039169b766a9e.png" src="_images/6648a1e8de65f624af65f0c8da9deb021d7682c8ecc5cebc1ce039169b766a9e.png" />
 </div>
@@ -1334,7 +1382,12 @@ document.write(`
 </section>
 <section id="payment-habit">
 <h3><em><strong>Payment Habit</strong></em><a class="headerlink" href="#payment-habit" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">payment_habit</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;payment_habit&quot;</span><span class="p">)</span>
 
@@ -1348,6 +1401,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/63b38f97e928373830b96e8193a52f3b9f4f487f90bb0969e2c274f4fecdd958.png" src="_images/63b38f97e928373830b96e8193a52f3b9f4f487f90bb0969e2c274f4fecdd958.png" />
 </div>
@@ -1387,7 +1441,12 @@ document.write(`
 </section>
 <section id="total-contacts">
 <h3><em><strong>Total Contacts</strong></em><a class="headerlink" href="#total-contacts" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_contacts</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;total_contacts&quot;</span><span class="p">)</span>
 
@@ -1401,6 +1460,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/0fd2f3f9ebe6776d2441080120b5b7241278eeb97747a01ad4ed68824ed1e77d.png" src="_images/0fd2f3f9ebe6776d2441080120b5b7241278eeb97747a01ad4ed68824ed1e77d.png" />
 </div>
@@ -1440,7 +1500,12 @@ document.write(`
 </section>
 <section id="total-agreements">
 <h3><em><strong>Total Agreements</strong></em><a class="headerlink" href="#total-agreements" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_agreements</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Antecedent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;total_agreements&quot;</span><span class="p">)</span>
 
@@ -1454,6 +1519,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/936e5b94511d04985e8f13e078faf75897eb4c284b6aea5c59cfca28380fc039.png" src="_images/936e5b94511d04985e8f13e078faf75897eb4c284b6aea5c59cfca28380fc039.png" />
 </div>
@@ -1492,7 +1558,12 @@ document.write(`
 </section>
 <section id="client-risk">
 <h2><em><strong>Client Risk</strong></em><a class="headerlink" href="#client-risk" title="Link to this heading">#</a></h2>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client_risk</span> <span class="o">=</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Consequent</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="s2">&quot;client_risk&quot;</span><span class="p">)</span>
 
@@ -1508,6 +1579,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/a5dd33084856e1d05b55fbd427b95b2e17fd7e595a8bf1f0182a355e39f0b0d9.png" src="_images/a5dd33084856e1d05b55fbd427b95b2e17fd7e595a8bf1f0182a355e39f0b0d9.png" />
 </div>
@@ -1515,7 +1587,12 @@ document.write(`
 </section>
 <section id="rule-definition">
 <h2><em><strong>Rule Definition</strong></em><a class="headerlink" href="#rule-definition" title="Link to this heading">#</a></h2>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rules</span>
 <span class="n">rules</span> <span class="o">=</span> <span class="p">[</span>
@@ -1690,13 +1767,20 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">([</span><span class="n">ant</span><span class="o">.</span><span class="n">label</span> <span class="k">for</span> <span class="n">ant</span> <span class="ow">in</span> <span class="n">simulation</span><span class="o">.</span><span class="n">ctrl</span><span class="o">.</span><span class="n">antecedents</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;risk&#39;, &#39;a_days&#39;, &#39;overdue_installment&#39;, &#39;payment_habit&#39;, &#39;overdue_balance&#39;, &#39;total_contacts&#39;, &#39;total_balance_TDC&#39;, &#39;total_balance_CDC&#39;, &#39;prioritization&#39;, &#39;total_agreements&#39;]
 </pre></div>
@@ -1705,7 +1789,12 @@ document.write(`
 </div>
 <section id="simulation">
 <h3><em><strong>Simulation</strong></em><a class="headerlink" href="#simulation" title="Link to this heading">#</a></h3>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulation</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="s2">&quot;risk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.6</span>
 <span class="n">simulation</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="s2">&quot;a_days&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span>
@@ -1720,8 +1809,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulation</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 <span class="n">valor_crisp</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="s1">&#39;client_risk&#39;</span><span class="p">]</span>
@@ -1738,6 +1833,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Defuzzified Crisp Value: 2.4981762917933144
 Membership Degrees: {&#39;Low&#39;: np.float64(0.0), &#39;Mild&#39;: np.float64(1.0), &#39;Medium&#39;: np.float64(0.622720364741643), &#39;High&#39;: np.float64(0.0), &#39;Critical&#39;: np.float64(0.0)}
@@ -1746,7 +1842,12 @@ Customer Profile: Mild
 </div>
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">client_risk</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">sim</span><span class="o">=</span><span class="n">simulation</span><span class="p">)</span> 
@@ -1755,6 +1856,7 @@ Customer Profile: Mild
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 800x600 with 0 Axes&gt;
 </pre></div>
@@ -1762,12 +1864,18 @@ Customer Profile: Mild
 <img alt="_images/aa019c87fbd0fd3761baca0624aee6f1874f9c8366aa12eb5a9e31511077853d.png" src="_images/aa019c87fbd0fd3761baca0624aee6f1874f9c8366aa12eb5a9e31511077853d.png" />
 </div>
 </div>
-<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; Method Desfuzify: </span><span class="si">{</span><span class="n">client_risk</span><span class="o">.</span><span class="n">defuzzify_method</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39; Method Desfuzify: centroid&#39;
 </pre></div>
