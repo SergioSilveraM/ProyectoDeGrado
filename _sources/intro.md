@@ -1,39 +1,37 @@
-# ***Proyecto de Segmentación de Clientes***
+# ***Customer Segmentation Project***
 
-## Descripción General
+## General Description
 
-Este proyecto desarrolla un sistema experto de ***segmentación de clientes morosos*** mediante la integración de técnicas de ***machine learning*** y un sistema de ***inferencia difusa***. El objetivo final es clasificar a los clientes en segmentos de riesgo que permitan ***priorizar recursos de cobranza*** y diseñar estrategias más efectivas, considerando tanto datos objetivos (variables extraidas a través de FI) como criterios subjetivos derivados del juicio experto.
+This project develops an expert system for the ***segmentation of delinquent clients*** by integrating ***machine learning*** techniques with a ***fuzzy inference system***. The ultimate goal is to classify clients into risk segments that allow for ***prioritizing collection resources*** and designing more effective strategies, considering both objective data (features extracted through FI) and subjective criteria derived from expert judgment.
 
-## Objetivos
+## Objectives
 
-1. ***Construir un sistema de segmentación híbrido:*** Integrar modelos explicativos de ***machine learning*** con un sistema difuso basado en reglas para segmentar clientes según su perfil de riesgo y probabilidad de cumplimiento.
+1. ***Build a hybrid segmentation system:*** Integrate explanatory ***machine learning*** models with a rule-based fuzzy system to segment clients according to their risk profile and likelihood of payment compliance.
 
-2. ***Capturar incertidumbre y subjetividad:*** Modelar con lógica difusa variables complejas como la disposición de pago, el nivel de contacto, la franja de mora o la antigüedad de la obligación, que no pueden ser descritas completamente por reglas rígidas.
+2. ***Capture uncertainty and subjectivity:*** Use fuzzy logic to model complex variables such as payment willingness, level of contact, delinquency range, or account age—variables that cannot be fully described using rigid rules.
 
-3. ***Diseñar reglas lingüísticas de segmentación:*** Definir un conjunto de reglas basadas en conocimiento experto y variables modeladas (incluyendo las salidas del modelo ML) para agrupar clientes en segmentos operativos accionables.
+3. ***Design linguistic segmentation rules:*** Define a set of rules based on expert knowledge and modeled variables (including ML model outputs) to group clients into actionable operational segments.
 
-4. ***Facilitar decisiones operativas:*** Ofrecer un sistema consultable que permita a los agentes de cobranza identificar con rapidez el tipo de cliente y adaptar sus estrategias de gestión.
+4. ***Facilitate operational decisions:*** Provide a queryable system that enables collection agents to quickly identify the client type and adapt their management strategies accordingly.
 
-## Fases del Proyecto
+## Project Phases
 
-### Fase 1: Modelado - Machine Learning
-- Consolidación de datos históricos y de gestión
-- Entrenamiento de modelo explicativo (XGBoost)
-- Obtención de probabilidades por clase como insumo para el sistema difuso
+### Phase 1: Modeling - Machine Learning
+- Consolidation of historical and management data
+- Training of an explanatory model (XGBoost)
+- Generation of class probabilities as input to the fuzzy system
 
-### Fase 2: Modelado - Lógica Difusa
-- Caracterización de variables clave
-- Definición de funciones de pertenencia
-- Creación de reglas de inferencia basadas en juicio experto
-- Validación conceptual y funcional del sistema
+### Phase 2: Modeling - Fuzzy Logic
+- Characterization of key variables
+- Definition of membership functions
+- Creation of inference rules based on expert knowledge
+- Conceptual and functional validation of the system
 
-### Fase 3: Integración y Despliegue
-- Integración del modelo ML con el sistema difuso
-- Desarrollo de una interfaz de consulta
-- Ejecución de prueba piloto con datos reales
+### Phase 3: Integration and Deployment
+- Integration of the ML model with the fuzzy system
+- Development of a user interface
+- Execution of a pilot test with real data
 
-
-## Tabla de Contenido
+## Table of Contents
 
 ```{tableofcontents}
-```
