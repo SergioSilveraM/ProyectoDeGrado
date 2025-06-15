@@ -1,0 +1,1202 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BenchMark &#8212; Proyecto Segmentación de Riesgo</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bench';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Profiles and Levels" href="variables.html" />
+    <link rel="prev" title="MLP" href="mlp_ok.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Proyecto Segmentación de Riesgo - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Proyecto Segmentación de Riesgo - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Proyecto de Segmentación de Clientes
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="main.html"><em><strong>Exploratory Analysis Data</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="cart_ok.html"><em><strong>Cart</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_forest_ok.html"><em><strong>Random Forest</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="knn_ok.html"><em><strong>KNN</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="svc_ok.html"><em><strong>SVC</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="xgboost_ok.html"><em><strong>XG-Boost</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="xgboost_balanced.html"><em><strong>XG-Boost Balanced</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="lgbm_ok.html"><em><strong>LGBM</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_ok.html"><em><strong>MLP</strong></em></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>BenchMark</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html"><em><strong>Profiles and Levels</strong></em></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bench.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>BenchMark</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validation"><em><strong>Validation</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-avg"><em><strong>macro avg</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weighted-avg"><em><strong>weighted avg</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global"><em><strong>Global</strong></em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test"><em><strong>Test</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><em><strong>macro avg</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><em><strong>weighted avg</strong></em></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="benchmark">
+<h1><em><strong>BenchMark</strong></em><a class="headerlink" href="#benchmark" title="Link to this heading">#</a></h1>
+<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">reporte_metricas</span> <span class="kn">import</span> <span class="n">ReporteMetricas</span>
+
+<span class="n">report</span> <span class="o">=</span> <span class="n">ReporteMetricas</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded 9 report(s)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="validation">
+<h2><em><strong>Validation</strong></em><a class="headerlink" href="#validation" title="Link to this heading">#</a></h2>
+<section id="macro-avg">
+<h3><em><strong>macro avg</strong></em><a class="headerlink" href="#macro-avg" title="Link to this heading">#</a></h3>
+<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfval_macro</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Type == &#39;val&#39; and Class == &#39;macro avg&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;log_loss&#39;</span><span class="p">,</span> <span class="s1">&#39;auc&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfval_macro</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;f1-score&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfval_macro</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Model</th>
+      <th>Type</th>
+      <th>Class</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1-score</th>
+      <th>support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>6</th>
+      <td>XGBOOST</td>
+      <td>val</td>
+      <td>macro avg</td>
+      <td>0.86</td>
+      <td>0.811</td>
+      <td>0.833</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>XGBOOST_Balanced</td>
+      <td>val</td>
+      <td>macro avg</td>
+      <td>0.844</td>
+      <td>0.815</td>
+      <td>0.829</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LGBM</td>
+      <td>val</td>
+      <td>macro avg</td>
+      <td>0.849</td>
+      <td>0.803</td>
+      <td>0.824</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MLP</td>
+      <td>val</td>
+      <td>macro avg</td>
+      <td>0.807</td>
+      <td>0.769</td>
+      <td>0.786</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>RF</td>
+      <td>val</td>
+      <td>macro avg</td>
+      <td>0.766</td>
+      <td>0.792</td>
+      <td>0.778</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SVC</td>
+      <td>val</td>
+      <td>macro avg</td>
+      <td>0.756</td>
+      <td>0.744</td>
+      <td>0.75</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>RL</td>
+      <td>val</td>
+      <td>macro avg</td>
+      <td>0.72</td>
+      <td>0.771</td>
+      <td>0.74</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>KNN</td>
+      <td>val</td>
+      <td>macro avg</td>
+      <td>0.736</td>
+      <td>0.639</td>
+      <td>0.673</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>CART</td>
+      <td>val</td>
+      <td>macro avg</td>
+      <td>0.649</td>
+      <td>0.657</td>
+      <td>0.652</td>
+      <td>5085.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="weighted-avg">
+<h3><em><strong>weighted avg</strong></em><a class="headerlink" href="#weighted-avg" title="Link to this heading">#</a></h3>
+<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfval_weight</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Type == &#39;val&#39; and Class == &#39;weighted avg&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;log_loss&#39;</span><span class="p">,</span> <span class="s1">&#39;auc&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfval_weight</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;f1-score&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfval_weight</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Model</th>
+      <th>Type</th>
+      <th>Class</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1-score</th>
+      <th>support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>6</th>
+      <td>XGBOOST</td>
+      <td>val</td>
+      <td>weighted avg</td>
+      <td>0.891</td>
+      <td>0.895</td>
+      <td>0.892</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>XGBOOST_Balanced</td>
+      <td>val</td>
+      <td>weighted avg</td>
+      <td>0.886</td>
+      <td>0.889</td>
+      <td>0.887</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LGBM</td>
+      <td>val</td>
+      <td>weighted avg</td>
+      <td>0.884</td>
+      <td>0.888</td>
+      <td>0.885</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MLP</td>
+      <td>val</td>
+      <td>weighted avg</td>
+      <td>0.859</td>
+      <td>0.864</td>
+      <td>0.861</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>RF</td>
+      <td>val</td>
+      <td>weighted avg</td>
+      <td>0.857</td>
+      <td>0.849</td>
+      <td>0.852</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SVC</td>
+      <td>val</td>
+      <td>weighted avg</td>
+      <td>0.835</td>
+      <td>0.838</td>
+      <td>0.836</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>RL</td>
+      <td>val</td>
+      <td>weighted avg</td>
+      <td>0.833</td>
+      <td>0.815</td>
+      <td>0.822</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>KNN</td>
+      <td>val</td>
+      <td>weighted avg</td>
+      <td>0.794</td>
+      <td>0.809</td>
+      <td>0.794</td>
+      <td>5085.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>CART</td>
+      <td>val</td>
+      <td>weighted avg</td>
+      <td>0.761</td>
+      <td>0.754</td>
+      <td>0.757</td>
+      <td>5085.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="global">
+<h3><em><strong>Global</strong></em><a class="headerlink" href="#global" title="Link to this heading">#</a></h3>
+<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_val_global</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Type == &#39;val&#39; and Class == &#39;global&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;precision&#39;</span><span class="p">,</span> <span class="s1">&#39;recall&#39;</span><span class="p">,</span> <span class="s1">&#39;f1-score&#39;</span><span class="p">,</span> <span class="s1">&#39;support&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_val_global</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;auc&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_val_global</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Model</th>
+      <th>Type</th>
+      <th>Class</th>
+      <th>accuracy</th>
+      <th>log_loss</th>
+      <th>auc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>6</th>
+      <td>XGBOOST</td>
+      <td>val</td>
+      <td>global</td>
+      <td>0.895</td>
+      <td>0.294</td>
+      <td>0.967</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LGBM</td>
+      <td>val</td>
+      <td>global</td>
+      <td>0.888</td>
+      <td>0.303</td>
+      <td>0.964</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>XGBOOST_Balanced</td>
+      <td>val</td>
+      <td>global</td>
+      <td>0.889</td>
+      <td>0.306</td>
+      <td>0.963</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MLP</td>
+      <td>val</td>
+      <td>global</td>
+      <td>0.864</td>
+      <td>0.367</td>
+      <td>0.95</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>RF</td>
+      <td>val</td>
+      <td>global</td>
+      <td>0.849</td>
+      <td>0.463</td>
+      <td>0.949</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SVC</td>
+      <td>val</td>
+      <td>global</td>
+      <td>0.838</td>
+      <td>0.419</td>
+      <td>0.934</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>RL</td>
+      <td>val</td>
+      <td>global</td>
+      <td>0.815</td>
+      <td>0.561</td>
+      <td>0.926</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>KNN</td>
+      <td>val</td>
+      <td>global</td>
+      <td>0.809</td>
+      <td>1.883</td>
+      <td>0.9</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>CART</td>
+      <td>val</td>
+      <td>global</td>
+      <td>0.754</td>
+      <td>0.752</td>
+      <td>0.843</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="test">
+<h2><em><strong>Test</strong></em><a class="headerlink" href="#test" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><em><strong>macro avg</strong></em><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfval_macro</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Type == &#39;test&#39; and Class == &#39;macro avg&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;log_loss&#39;</span><span class="p">,</span> <span class="s1">&#39;auc&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfval_macro</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;f1-score&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfval_macro</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Model</th>
+      <th>Type</th>
+      <th>Class</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1-score</th>
+      <th>support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>8</th>
+      <td>XGBOOST_Balanced</td>
+      <td>test</td>
+      <td>macro avg</td>
+      <td>0.85</td>
+      <td>0.806</td>
+      <td>0.826</td>
+      <td>6355.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>XGBOOST</td>
+      <td>test</td>
+      <td>macro avg</td>
+      <td>0.844</td>
+      <td>0.808</td>
+      <td>0.825</td>
+      <td>6356.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LGBM</td>
+      <td>test</td>
+      <td>macro avg</td>
+      <td>0.849</td>
+      <td>0.793</td>
+      <td>0.818</td>
+      <td>6355.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MLP</td>
+      <td>test</td>
+      <td>macro avg</td>
+      <td>0.814</td>
+      <td>0.767</td>
+      <td>0.788</td>
+      <td>6355.0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>RF</td>
+      <td>test</td>
+      <td>macro avg</td>
+      <td>0.771</td>
+      <td>0.789</td>
+      <td>0.779</td>
+      <td>6355.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SVC</td>
+      <td>test</td>
+      <td>macro avg</td>
+      <td>0.756</td>
+      <td>0.753</td>
+      <td>0.754</td>
+      <td>6356.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>RL</td>
+      <td>test</td>
+      <td>macro avg</td>
+      <td>0.733</td>
+      <td>0.786</td>
+      <td>0.754</td>
+      <td>6356.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>KNN</td>
+      <td>test</td>
+      <td>macro avg</td>
+      <td>0.745</td>
+      <td>0.643</td>
+      <td>0.678</td>
+      <td>6356.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>CART</td>
+      <td>test</td>
+      <td>macro avg</td>
+      <td>0.649</td>
+      <td>0.657</td>
+      <td>0.653</td>
+      <td>6356.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id2">
+<h3><em><strong>weighted avg</strong></em><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="cell tag_&quot;hide-input&quot; docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfval_weight</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Type == &#39;test&#39; and Class == &#39;weighted avg&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;log_loss&#39;</span><span class="p">,</span> <span class="s1">&#39;auc&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfval_weight</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;f1-score&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfval_weight</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Model</th>
+      <th>Type</th>
+      <th>Class</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1-score</th>
+      <th>support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>8</th>
+      <td>XGBOOST_Balanced</td>
+      <td>test</td>
+      <td>weighted avg</td>
+      <td>0.887</td>
+      <td>0.891</td>
+      <td>0.888</td>
+      <td>6355.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>XGBOOST</td>
+      <td>test</td>
+      <td>weighted avg</td>
+      <td>0.885</td>
+      <td>0.888</td>
+      <td>0.886</td>
+      <td>6356.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LGBM</td>
+      <td>test</td>
+      <td>weighted avg</td>
+      <td>0.884</td>
+      <td>0.889</td>
+      <td>0.885</td>
+      <td>6355.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MLP</td>
+      <td>test</td>
+      <td>weighted avg</td>
+      <td>0.861</td>
+      <td>0.866</td>
+      <td>0.862</td>
+      <td>6355.0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>RF</td>
+      <td>test</td>
+      <td>weighted avg</td>
+      <td>0.856</td>
+      <td>0.85</td>
+      <td>0.852</td>
+      <td>6355.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SVC</td>
+      <td>test</td>
+      <td>weighted avg</td>
+      <td>0.834</td>
+      <td>0.836</td>
+      <td>0.835</td>
+      <td>6356.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>RL</td>
+      <td>test</td>
+      <td>weighted avg</td>
+      <td>0.84</td>
+      <td>0.823</td>
+      <td>0.829</td>
+      <td>6356.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>KNN</td>
+      <td>test</td>
+      <td>weighted avg</td>
+      <td>0.797</td>
+      <td>0.811</td>
+      <td>0.795</td>
+      <td>6356.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>CART</td>
+      <td>test</td>
+      <td>weighted avg</td>
+      <td>0.762</td>
+      <td>0.757</td>
+      <td>0.76</td>
+      <td>6356.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Durante el proceso de <em><strong>benchmarking</strong></em> se compararon distintos modelos de clasificación, recopilando métricas relevantes tanto en los conjuntos de validación como de prueba. El modelo <em><strong>XGBoost sin balanceo</strong></em> presentó el <em><strong>mejor desempeño global</strong></em> en términos de <em><strong>F1-score</strong></em> en validación, alcanzando valores de <em><strong><span class="math notranslate nohighlight">\(0.833\)</span> (macro)</strong></em> y <em><strong><span class="math notranslate nohighlight">\(0.892\)</span> (weighted)</strong></em>, superando ligeramente al modelo balanceado con ADASYN.</p>
+<p>En el conjunto de prueba, si bien el modelo balanceado mostró una <em><strong>mejora marginal</strong></em> de <em><strong><span class="math notranslate nohighlight">\(+0.001\)</span> a <span class="math notranslate nohighlight">\(+0.002\)</span></strong></em> en el <em><strong>F1-score</strong></em>, estas diferencias no se consideran significativas desde un punto de vista práctico. Por tanto, se concluye que el balanceo <em><strong>no mejoró sustancialmente</strong></em> el rendimiento del modelo e incluso podría introducir sesgos a través de las muestras minoritarias generadas artificialmente mediante sobremuestreo.</p>
+<p>Adicional a las métricas anteriores, se observó que, aunque el modelo balanceado ofreció una ligera ventaja en la clase ‘No pago’ (<em><strong><span class="math notranslate nohighlight">\(+0.01\)</span></strong></em>), <em><strong>no mejoró el rendimiento</strong></em> en las clases minoritarias (‘Pago parcial’ y ‘Pago completo’), donde el <em><strong>F1-score</strong></em> fue prácticamente equivalente. Esto refuerza la afirmación de que el balanceo no ofreció beneficios sustanciales y, además, por la naturaleza de la actividad de la organización, esta mejora marginal en la clase mayoritaria no representa ningún beneficio, además de complejizar el modelo.</p>
+<p>Otro punto a destacar es la <em><strong>estabilidad del modelo XGBoost</strong></em> a través de ambos conjuntos, manteniendo diferencias mínimas entre validación y test, lo que indica una <em><strong>buena capacidad de generalización</strong></em>. Desde una perspectiva práctica, el uso de sobremuestreo sintético fue descartado al no aportar mejoras relevantes, evitando así la posible introducción de ruido artificial que afecte la interpretabilidad y robustez del modelo.</p>
+<p>En cuanto a la comparación con otros tipos de modelos, se observa una <em><strong>superioridad sistemática</strong></em> de los modelos basados en <em><strong>gradiente</strong></em>, como <em><strong>XGBoost</strong></em> y <em><strong>LightGBM</strong></em>, frente a enfoques clásicos como <em><strong>árboles de decisión</strong></em>, <em><strong>regresión logística</strong></em>, <em><strong>SVC</strong></em> y <em><strong>KNN</strong></em>, e incluso respecto a redes neuronales como el <em><strong>MLP</strong></em>. Esta ventaja se refleja tanto en las métricas promedio (<strong>macro</strong> y <strong>weighted</strong>) como en la consistencia entre los conjuntos de validación y prueba. Además, este comportamiento es coherente con lo reportado en la literatura reciente, donde los modelos de <em>boosting</em> han demostrado una excelente capacidad para manejar relaciones no lineales, conjuntos de datos desbalanceados y tareas de clasificación complejas en el ámbito financiero y de riesgo crediticio. En el entorno industrial, su uso también se ha consolidado debido a su <em><strong>buen desempeño, velocidad, interpretabilidad y facilidad de ajuste fino</strong></em>.</p>
+<p>Finalmente, el modelo seleccionado como <em><strong>ganador</strong></em> en el proceso de <em><strong>benchmarking</strong></em> fue el <em><strong>XGBoost sin balanceo</strong></em>, priorizando tanto su rendimiento técnico como su adaptabilidad a entornos productivos. Sobre este modelo se construyó el sistema de explicación local con LIME y la integración con el motor de inferencia difusa, descritos en las siguientes secciones.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="mlp_ok.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><em><strong>MLP</strong></em></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="variables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><em><strong>Profiles and Levels</strong></em></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validation"><em><strong>Validation</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-avg"><em><strong>macro avg</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weighted-avg"><em><strong>weighted avg</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global"><em><strong>Global</strong></em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test"><em><strong>Test</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><em><strong>macro avg</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><em><strong>weighted avg</strong></em></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sergio Silvera
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
