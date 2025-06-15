@@ -1,129 +1,126 @@
-# 🧠 **Optimización de la Gestión de Cobranza en una BPO Colombiana: Integración de Modelos de Aprendizaje Automático e Inferencia Difusa para la Segmentación y Priorización de Clientes**
+# 🧠 **Optimizing Debt Collection Management in a Colombian BPO: Integration of Machine Learning Models and Fuzzy Inference for Client Segmentation and Prioritization**
 
-Este proyecto propone el diseño e implementación de un **sistema experto** para la clasificación y segmentación de clientes morosos, integrando modelos de **aprendizaje automático (XGBoost)** con un motor de **inferencia difusa**. Su objetivo es optimizar la asignación de recursos en entornos de cobranza mediante una clasificación de riesgo precisa y explicable.
+This project proposes the design and implementation of an **expert system** for the classification and segmentation of delinquent clients, integrating **machine learning models (XGBoost)** with a **fuzzy inference engine**. Its goal is to optimize the allocation of resources in collection environments through accurate and explainable risk classification.
 
-> ⭐ Puedes acceder a la versión publicada en GitHub Pages [aquí](https://sergiosilveram.github.io/ProyectoDeGrado/intro.html)
-
----
-
-## 🔎 Objetivo del proyecto
-
-**Problema de investigación:**
-¿Cómo puede una BPO en Colombia optimizar la gestión y recuperación de cartera vencida mediante un sistema inteligente que combine técnicas de aprendizaje automático y lógica difusa, con el fin de segmentar clientes y diseñar estrategias de cobranza personalizadas?
-
-**Propuesta:** Integrar el poder predictivo de modelos como **XGBoost** con la flexibilidad y explicabilidad de la **lógica difusa**, construyendo un sistema robusto que soporte decisiones operativas en contextos financieros.
+> ⭐ You can access the published version on GitHub Pages [here](https://sergiosilveram.github.io/ProyectoDeGrado/intro.html)
 
 ---
 
-## 📊 Resultados destacados
+## 🔎 Project Objective
 
-* Modelo seleccionado: **XGBoost** (sin balanceo)
-* Métricas en test:
+**Research question:**  
+How can a BPO in Colombia optimize overdue portfolio management and recovery using an intelligent system that combines machine learning techniques and fuzzy logic to segment clients and design personalized collection strategies?
 
-  * **Precisión**: `0.844`
+**Proposal:**  
+Integrate the predictive power of models like **XGBoost** with the flexibility and explainability of **fuzzy logic**, building a robust system to support operational decisions in financial contexts.
+
+---
+
+## 📊 Key Results
+
+* Selected model: **XGBoost** (unbalanced)
+* Test metrics:
+  * **Accuracy**: `0.844`
   * **F1-Score**: `0.825`
   * **AUC**: `0.96`
 
-### 🔍 Visualizaciones clave del sistema
+### 🔍 Key Visualizations of the System
 
-#### 📌 Matriz de confusión del modelo XGBoost
+#### 📌 Confusion Matrix of the XGBoost Model
 
-![Matriz de confusión](docs/cm_test.png)
+![Confusion Matrix](docs/cm_test.png)
 
-#### 🤖 Diagrama del sistema experto difuso
+#### 🤖 Diagram of the Fuzzy Expert System
 
-![Diagrama sistema experto](docs/Sistema_Experto.png)
+![Expert System Diagram](docs/Sistema_Experto.png)
 
-#### 📊 Explicaciones Locales por clase usando LIME
+#### 📊 Local Explanations per Class Using LIME
 
-![Explicaciones LIME](docs/LIME.png)
+![LIME Explanations](docs/LIME.png)
 
-![Explicaciones LIME por clase](docs/LIME_Class1.png)
-
----
-
-## 📖 Metodología
-
-El proceso se dividó en dos grandes fases:
-
-1. **Entrenamiento y selección del mejor clasificador:**
-
-   * Modelos evaluados: ***Decision Tree***, ***Random Forest***, ***SVC***, ***KNN***, ***LGBM***, ***MLP***, ***XGBoost***.
-   * Hiperparámetrización con ***Optuna***
-   * Validación cruzada anidada.
-   * Evaluación con métricas macro/weighted avg y estabilidad por pliegue.
-
-2. **Integración con sistema experto difuso:**
-
-   * Se definieron $143$ reglas ***IF-THEN*** usando juicio experto + FI del modelo XGBoost.
-   * Inferencia mediante el enfoque ***Mamdani***.
-   * Defuzzificación por el ***centroide***.
+![LIME Explanations by Class](docs/LIME_Class1.png)
 
 ---
 
-## 📂 Estructura del repositorio
+## 📖 Methodology
+
+The process was divided into two main phases:
+
+1. **Training and selection of the best classifier:**
+   * Evaluated models: ***Decision Tree***, ***Random Forest***, ***SVC***, ***KNN***, ***LGBM***, ***MLP***, ***XGBoost***
+   * Hyperparameter tuning with ***Optuna***
+   * Nested cross-validation
+   * Evaluation using macro/weighted avg metrics and fold stability
+
+2. **Integration with fuzzy expert system:**
+   * A total of $143$ ***IF-THEN*** rules were defined using expert judgment + FI from the XGBoost model
+   * Inference via the ***Mamdani*** approach
+   * Defuzzification using the ***centroid*** method
+
+---
+
+## 📂 Repository Structure
 
 ```bash
 ProyectoDeGrado/
-├── Pruebas_anteriores/       # Versiones previas y experimentos iniciales
-├── Scripts FL/               # Implementación completa del sistema experto
-├── docs/                     # Documentos, notebooks y recursos visuales
+├── Pruebas_anteriores/       # Previous versions and initial experiments
+├── Scripts FL/               # Full implementation of the expert system
+├── docs/                     # Documents, notebooks, and visual resources
 │   ├── Sistema_Experto.png
 │   ├── LIME.png
 │   ├── cm_test.png
 │   ├── Variables.md
 │   ├── *.ipynb
-```
+````
 
 ---
 
-## 💪 Contribuciones del proyecto
+## 💪 Project Contributions
 
-* Desarrollo de un sistema híbrido **interpretable y operativo**.
-* Consolidación de un **pipeline automatizado** capaz de producir salidas .xlsx para soportar decisiones operativas.
-* Aplicación efectiva de técnicas de explicabilidad local (LIME) para **cumplimiento regulatorio y trazabilidad**.
-
----
-
-## 📊 Visualizaciones adicionales
-
-| Curvas de pérdida         | AUC-ROC XGBoost          | Representación Visual de Salida del Sistema Experto|
-| ------------------------- | ------------------------ |-------------------------------------------|
-| ![perdida](docs/loss.png) | ![params](docs/roc_multi.png) |![output](docs/out_FL.png)
-
-> Las visualizaciones presentadas evidencian la robustez del modelo.
+* Development of a **hybrid, interpretable, and operational** system
+* Consolidation of an **automated pipeline** capable of generating `.xlsx` outputs to support operational decision-making
+* Effective application of local explainability techniques (LIME) for **regulatory compliance and traceability**
 
 ---
 
-## 🔄 Futuras extensiones
+## 📊 Additional Visualizations
 
-* Despliegue de una interfaz gráfica interactiva.
-* Integración con bases ***PostgreSQL*** y automatización de informes.
-* Mejora adaptativa de reglas difusas.
-* Análisis de impacto financiero de cada decisión de segmentación.
+| Loss Curves            | AUC-ROC XGBoost            | Visual Output of the Expert System |
+| ---------------------- | -------------------------- | ---------------------------------- |
+| ![loss](docs/loss.png) | ![roc](docs/roc_multi.png) | ![output](docs/out_FL.png)         |
 
----
-
-## 👀 Código y resultados
-
-✅ Visualiza online: [https://sergiosilveram.github.io/ProyectoDeGrado/intro.html](https://sergiosilveram.github.io/ProyectoDeGrado/intro.html)
+> The presented visualizations demonstrate the robustness of the model.
 
 ---
 
-## 📅 Estado del proyecto
+## 🔄 Future Extensions
 
-* [x] Entrenamiento de modelos y benchmarking
-* [x] Construcción de motor difuso
-* [x] Integración completa en pipeline
-* [x] Exportación de resultados a Excel
-* [ ] Despliegue productivo con interfaz gráfica
+* Deployment of an interactive graphical interface
+* Integration with ***PostgreSQL*** databases and report automation
+* Adaptive improvement of fuzzy rules
+* Financial impact analysis of each segmentation decision
 
 ---
 
+## 👀 Code and Results
 
-## 📄 Referencias
+✅ View online: [https://sergiosilveram.github.io/ProyectoDeGrado/intro.html](https://sergiosilveram.github.io/ProyectoDeGrado/intro.html)
 
-* Documentación completa, visualizaciones y notebooks disponibles en el directorio `docs/`
-* El sistema es compatible con Python 3.10+, `scikit-learn`, `xgboost`, `skfuzzy`, `lime`, `optuna` y `pandas`
+---
 
-> © Sergio Silvera M. - Proyecto de Grado Maestría Analítica de Datos, Universidad del Norte
+## 📅 Project Status
+
+* [x] Model training and benchmarking
+* [x] Fuzzy engine development
+* [x] Full pipeline integration
+* [x] Export of results to Excel
+* [ ] Production deployment with graphical interface
+
+---
+
+## 📄 References
+
+* Complete documentation, visualizations, and notebooks available in the `docs/` directory
+* The system is compatible with Python 3.10+, `scikit-learn`, `xgboost`, `skfuzzy`, `lime`, `optuna`, and `pandas`
+
+> © Sergio Silvera M. - Master's Thesis Project, Data Analytics, Universidad del Norte
